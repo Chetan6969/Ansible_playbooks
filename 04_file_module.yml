@@ -1,0 +1,20 @@
+---
+- name: File module
+  hosts: all
+
+  tasks:
+    - name: Creating a file
+      file: 
+        path: /tmp/newfile.txt
+        state: absent
+        owner: hakcer
+        group: hakcer
+        
+    - name: Creating a directory
+      file: 
+        path: /tmp/newDirectory
+        state: absent
+        owner: hakcer
+        group: hakcer
+
+

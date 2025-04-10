@@ -1,0 +1,13 @@
+---
+- name: Download files
+  hosts: all
+
+  tasks:
+  - name: Download file
+    get_url:
+      url: https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe
+      dest: /tmp/scripts/
+      owner: hakcer
+      group: hakcer
+      mode: 0777
+

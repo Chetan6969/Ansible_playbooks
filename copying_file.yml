@@ -1,0 +1,13 @@
+---
+- name: Copying file to remote
+  hosts: all
+
+  tasks:
+    - name: Copy files
+      copy: 
+        src: /root/myfile.txt
+        dest: /tmp/
+        owner: hakcer
+        group: hakcer
+        mode: ugo=rw
+        backup: true
